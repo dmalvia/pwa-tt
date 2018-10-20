@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "taps-3c3e1",
+    "taps": "taps-3c3e1",
+    "pwa-banking": "pwa-banking",
+    "pwa-tt": "pea-tt",
+    "pwa-banking-tt": "pwa-banking-tt"
+  }
+}

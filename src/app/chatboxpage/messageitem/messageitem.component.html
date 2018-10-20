@@ -1,0 +1,13 @@
+<div class="clearfix message-row" [class.userInput]="!message.bot">
+    <div class="">
+        <span *ngIf="message.content !== 'Fund'" [class.message]="message.type== 'text'" [innerHTML]="message.content | safeHtml">{{message.content}}</span>
+        <app-fund (confirmTra)="getTransVal($event)" *ngIf="message.content == 'Fund'"></app-fund>
+    </div>
+</div>
+<div *ngIf="message.bot" class="suggest-container">
+    <div class="sugg-wrap">
+        <div class="suggest-wrapper">
+            <span *ngFor="let item of suggestionArr" (click)="makeAction(item)">{{item.action}}</span>
+        </div>
+    </div>
+</div>

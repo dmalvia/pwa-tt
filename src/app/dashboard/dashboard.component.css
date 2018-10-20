@@ -1,0 +1,259 @@
+.bg-img {
+  background-image: url('/assets/pattern.png');
+  background-color: #f2f2f2;
+  padding:0px;
+  position: absolute;
+  min-height: 100%;
+  background-repeat: repeat;
+  background-position: center center
+  /* height:100vh; */
+  /* height: 100%; */
+}
+.white-card-menu {
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+    border-bottom:1px solid #dfdfdf;
+    /* padding:15px 2%; */
+    padding-top: 56px;
+    background: #fff;
+} 
+
+.grey-card {
+  /* background:rgba(20,113,120,0.6);   */
+  background:#fff;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.5); 
+  /* border-left: 4px solid green;  */
+  /* height: 200px; */
+  margin-bottom:13px;
+}
+
+
+.horizontal-nav {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:#c3c6c9;
+    font-weight:600;
+    /*max-width: 600px;*/
+    margin:0 auto;
+    /* padding:0px 15px; */
+}
+.horizontal-nav > a {
+    color: #c3c6c9;
+    display: inline-block;
+    padding: 15px 4% 5px;
+    
+}
+.horizontal-nav > a:hover {
+    text-decoration: none;
+    color: #60666e; 
+}
+.horizontal-nav > a.active {
+    color: #60666e; 
+    border-bottom: 2px solid #0062a8; 
+}
+
+.green-border > a.active {
+    color: #60666e; 
+    border-bottom: 2px solid rgba(75,184,151,1) !important;
+}
+
+@media screen and (max-width:550px ) {
+  .horizontal-nav {
+      max-width: auto;
+  }
+  .horizontal-nav > a {
+    padding: 15px 1% 5px;
+    
+  }
+}
+
+@media screen and (max-width:450px ) {
+    .horizontal-nav {
+        font-size: 11px;
+    }
+} 
+
+@media screen and (max-width:400px ) {
+  .horizontal-nav > a {
+    padding: 15px 1% 5px;
+    
+  }
+} 
+
+
+/* Floating button */
+
+    #presentation{
+    width: 480px;
+    height: 120px;
+    padding: 20px;
+    margin: auto;
+    background: #FFF;
+    margin-top: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    transition: all 0.3s; 
+    border-radius: 3px;
+  }
+  
+  #presentation:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.3s;
+    transform: translateZ(10px);
+  }
+  
+  #floating-button{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 75px;
+    right: 30px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #666;
+    background: #0062a8;
+  }
+
+  .greenbg {
+    background: rgba(75,184,151,1) !important;
+  }
+
+  
+  .plus{
+    color: white;
+    position: absolute;
+    top: 0;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 55px;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    animation: plus-out 0.3s;
+    transition: all 0.3s;
+  }
+  
+  #container-floating{
+    position: fixed;
+    width: 70px;
+    /* height: 70px; */
+    bottom: 30px;
+    right: 30px;
+    z-index: 50px;
+  }
+  
+  .floating-hover{
+    height: 400px;
+    width: 90px;
+    padding: 30px;
+  }
+  
+  .float-animate{
+    animation: plus-in 0.3s linear;
+    animation-fill-mode: forwards;
+  }
+    
+  @keyframes plus-in{
+      from {opacity: 1; transform: rotateZ(0deg);}
+      to {opacity: 1; transform: rotateZ(405deg);}
+  }
+  
+  @keyframes plus-out{
+      from {opacity: 1; transform: rotateZ(405deg);}
+      to {opacity: 1; transform: rotateZ(0deg);}
+  }
+  
+  .nds{
+    width: 175px;
+    padding:18px;
+    border-radius: 4px;
+    position: fixed;
+    z-index: 300;
+    transform:  scale(0);
+    cursor: pointer;
+    background: rgba(0,0,0,0.7);
+  }
+  
+  .nd1{
+    right: 40px;
+    bottom: 140px;
+    animation-delay: 0.2s;
+    animation: bounce-out-nds 0.3s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  .nd3{
+    right: 40px;
+    bottom: 195px;
+    animation-delay: 0.15s;
+    animation: bounce-out-nds 0.15s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  .nd4{
+    right: 40px;
+    bottom: 255px;
+    animation-delay: 0.1s;
+    animation: bounce-out-nds 0.1s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  .nd5{
+    right: 40px;
+    bottom: 315px;
+    animation-delay: 0.08s;
+    animation: bounce-out-nds 0.1s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  @keyframes bounce-nds{
+      from {opacity: 0;}
+      to {opacity: 1; transform: scale(1);}
+  }
+  
+  @keyframes bounce-out-nds{
+      from {opacity: 1; transform: scale(1);}
+      to {opacity: 0; transform: scale(0);}
+  }
+  
+  .menu-show{
+    animation: bounce-nds 0.1s linear;
+    animation-fill-mode:  forwards;
+  }
+  
+  .menu-show.nd3{
+    animation-delay: 0.08s;
+  }
+  .menu-show.nd4{
+    animation-delay: 0.15s;
+  }
+  .menu-show.nd5{
+    animation-delay: 0.2s;
+  }
+  
+  .letter{
+    font-size: 13px;
+    font-family: 'Roboto';
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 40px;
+    -webkit-transition: font-size 0.5s;
+    -moz-transition: font-size 0.5s;
+      -o-transition: font-size 0.5s;
+         transition: font-size 0.5s;
+  }
+  .letter:hover {
+      font-size: 14px;
+  }
+  
+  

@@ -1,0 +1,38 @@
+<header>
+    <div class="container">
+        <div class="menu font-blue" (click)="openMenu()">
+            <fa name="navicon"></fa>
+        </div>
+        <div class="logo text-center" (click)="redirectToLogin()">
+            <!-- <b class="font-blue" style="text-shadow:-1px 1px 0px #000">A</b>cme
+            <b class="font-blue" style="text-shadow:-1px 1px 0px #000">B</b>ank -->
+            <img src="assets/android-icon-144x144.png" width="42px" alt="logo" />
+        </div>
+        <div class="bank-opt" *ngIf="onlogin">
+            <span class="retail-opt" [ngClass]="{'changeBg':selectedRetail}" (click)="switchUser('retail')"><b>Retail</b></span>
+            <span class="corp-opt" [ngClass]="{'changeBg':selectedCorp}" (click)="switchUser('corp')"><b>Corp</b></span>
+        </div>
+        <div class="sidebar-div">
+            <div class="sidebar-menu text-center" [class.addLeft]="sideMenuLeft">
+                <fa name="close" class="close-menu" (click)="closeMenu()"></fa>
+                <div class="menu-list-div ">
+                    <!-- <div (click)="goToPage('login')">Personal Banking</div> -->
+                    <!-- <div>Business Banking</div> -->
+                    <!-- <div>Corporate Banking</div> -->
+                    <!-- <div>Digital Banking</div> -->
+                    <div>Register</div>
+                    <div>Forgot Password</div>
+                    <div (click)="goToPage('atm')">Branch Locator</div>
+                    <div>Contact Us</div>
+                    <div>FAQ's</div>
+                    <div (click)="goToPage('login')">Logout</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<p class="connection-banner" [ngStyle]="{background:state == 'offline' ? 'red' : 'green'}" [class.show-banner]="bannerDisplay">
+    You are
+    <b>{{state}}</b>
+</p>

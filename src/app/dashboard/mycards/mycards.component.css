@@ -1,0 +1,130 @@
+
+.cc-card {
+    width:600px;
+    height:150px;
+    /* background: #abcdef; */
+}
+.transfer-container {
+    max-width:600px;
+    width:100%;
+    /* margin-top: 7px; */
+    margin: 0 auto;
+    padding-top:15px;
+}
+
+.cc-common {
+    max-width:400px;
+    max-height:250px;
+    min-width: 280px;
+    width: 100%;
+    min-height: 180px;
+    height:100%;
+    /* border:1px solid #fff; */
+    border-radius: 8px;
+    margin: 0 auto;
+    padding:15px;
+    box-shadow: 4px 6px 2px rgba(0,0,0,0.2);
+}
+.card1 {
+    background: rgba(73,155,234,1);
+    background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
+    background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );    
+}
+.card2 {
+    background: rgba(232,75,190,1);
+    background: -moz-linear-gradient(left, rgba(232,75,190,1) 0%, rgba(188,32,227,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(232,75,190,1)), color-stop(100%, rgba(188,32,227,1)));
+    background: -webkit-linear-gradient(left, rgba(232,75,190,1) 0%, rgba(188,32,227,1) 100%);
+    background: -o-linear-gradient(left, rgba(232,75,190,1) 0%, rgba(188,32,227,1) 100%);
+    background: -ms-linear-gradient(left, rgba(232,75,190,1) 0%, rgba(188,32,227,1) 100%);
+    background: linear-gradient(to right, rgba(232,75,190,1) 0%, rgba(188,32,227,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e84bbe', endColorstr='#bc20e3', GradientType=1 );
+}
+.card3 {
+    background: rgba(230,125,76,1);
+    background: -moz-linear-gradient(left, rgba(230,125,76,1) 0%, rgba(227,163,34,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(230,125,76,1)), color-stop(100%, rgba(227,163,34,1)));
+    background: -webkit-linear-gradient(left, rgba(230,125,76,1) 0%, rgba(227,163,34,1) 100%);
+    background: -o-linear-gradient(left, rgba(230,125,76,1) 0%, rgba(227,163,34,1) 100%);
+    background: -ms-linear-gradient(left, rgba(230,125,76,1) 0%, rgba(227,163,34,1) 100%);
+    background: linear-gradient(to right, rgba(230,125,76,1) 0%, rgba(227,163,34,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e67d4c', endColorstr='#e3a322', GradientType=1 );
+}
+.topline {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.amex,.visa,.mastercard {
+    font-size: 50px;
+    color:#f8f9fa;
+}
+.card-pro {
+    margin-top:-15px;
+}
+.bank-name {
+    font-size:24px;
+    color:#f8f9fa;
+}
+.midline {
+    font-size: 25px;
+    color:#f8f9fa;
+    margin-bottom: 12px;
+}
+.midline > span {
+    margin-right: 20px;
+}
+.midline > span:last-child {
+    margin-right:0px;
+}
+.card-val {
+    color:#f8f9fa;
+    font-size:14px;
+    margin-bottom: 12px;
+}
+.card-val > span {
+    display: inline-block;
+    margin-right: 15px;
+}
+.card-val p {
+    margin-bottom: 0px;
+}
+.card-details {
+    max-width:400px;
+    width:100%;
+    margin:15px auto 0;
+}
+
+.card-details button {
+    width: 100%;
+}
+
+@media only screen and (max-width:380px) {
+    .cc-common {
+        box-shadow: none;
+    }
+    .carousel-inner {
+        height:auto;
+    }
+    .bank-name {
+        font-size: 16px;
+    }
+    .card-pro {
+        margin-top:-8px;
+    }
+    .amex,.visa,.mastercard {
+        font-size: 25px;
+    }
+    .midline {
+        font-size: 20px;
+        margin-top:15px;
+    }
+    
+
+
+}

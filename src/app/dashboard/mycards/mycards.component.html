@@ -1,0 +1,305 @@
+<div class="container-fluid" style="padding-bottom:56px;">
+  <div id="carouselExampleControls" class="carousel slide transfer-container" data-interval="false" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="cc-card cc-common card1">
+          <div class="topline">
+            <span class="pull-right bank-name">
+              ACME BANK
+            </span>
+            <span class="pull-left card-pro">
+              <fa name="cc-visa" class="visa"></fa>
+            </span>
+          </div>
+          <div class="midline">
+            <span>1234</span>
+            <span>2345</span>
+            <span>3456</span>
+            <span>4567</span>
+          </div>
+          <div class="card-val">
+            <span>
+              <p>Valid From</p>
+              <p>05/17</p>
+            </span>
+            <span>
+              <p>Valid Thru</p>
+              <p>05/22</p>
+            </span>
+          </div>
+          <div class="midline">
+            Sheldon Fernandes
+          </div>
+        </div>
+        <div class="card-details">
+          <p>
+            <button class="btn btn-primary text-left card1" type="button" data-toggle="collapse" data-target="#collapseDetail" aria-expanded="false"
+              aria-controls="collapseDetail">
+              Card Details
+            </button>
+          </p>
+          <div class="collapse" id="collapseDetail">
+            <div class="card card-body">
+              <div style="display: block;">
+                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+                  [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+          </div>
+          <p>
+            <button class="btn btn-primary text-left card1" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false"
+              aria-controls="collapseGraph">
+              Usage Demographics
+            </button>
+          </p>
+          <div class="collapse" id="collapseGraph">
+            <div class="card card-body">
+              <div style="display: block;">
+                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+                  [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+          </div>
+          <p>
+            <button class="btn btn-primary text-left card1" type="button" data-toggle="collapse" data-target="#collapseTxn" aria-expanded="false"
+              aria-controls="collapseTxn">
+              Transactions
+            </button>
+          </p>
+          <div class="collapse" id="collapseTxn">
+            <div class="card card-body">
+              <ul>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 1
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 2
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 3
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 4
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cc-card cc-common card2">
+          <div class="topline">
+            <span class="pull-right bank-name">
+              ACME BANK
+            </span>
+            <span class="pull-left card-pro">
+              <fa name="cc-mastercard" class="mastercard"></fa>
+            </span>
+          </div>
+          <div class="midline">
+            <span>1234</span>
+            <span>2345</span>
+            <span>3456</span>
+            <span>4567</span>
+          </div>
+          <div class="card-val">
+            <span>
+              <p>Valid From</p>
+              <p>05/17</p>
+            </span>
+            <span>
+              <p>Valid Thru</p>
+              <p>05/22</p>
+            </span>
+          </div>
+          <div class="midline">
+            Sheldon Fernandes
+          </div>
+        </div>
+        <div class="card-details">
+          <p>
+            <button class="btn btn-primary text-left card2" type="button" data-toggle="collapse" data-target="#collapseDetail" aria-expanded="false"
+              aria-controls="collapseDetail">
+              Card Details
+            </button>
+          </p>
+          <div class="collapse" id="collapseDetail">
+            <div class="card card-body">
+              <div style="display: block;">
+                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+                  [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+          </div>
+          <p>
+            <button class="btn btn-primary text-left card2" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false"
+              aria-controls="collapseGraph">
+              Usage Demographics
+            </button>
+          </p>
+          <div class="collapse" id="collapseGraph">
+            <div class="card card-body">
+              <div style="display: block;">
+                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+                  [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+          </div>
+          <p>
+            <button class="btn btn-primary text-left card2" type="button" data-toggle="collapse" data-target="#collapseTxn" aria-expanded="false"
+              aria-controls="collapseTxn">
+              Transactions
+            </button>
+          </p>
+          <div class="collapse" id="collapseTxn">
+            <div class="card card-body">
+              <ul>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 1
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 2
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 3
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 4
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cc-card cc-common card3">
+          <div class="topline">
+            <span class="pull-right bank-name">
+              ACME BANK
+            </span>
+            <span class="pull-left card-pro">
+              <fa name="cc-amex" class="amex"></fa>
+            </span>
+          </div>
+          <div class="midline">
+            <span>1234</span>
+            <span>2345</span>
+            <span>3456</span>
+            <span>4567</span>
+          </div>
+          <div class="card-val">
+            <span>
+              <p>Valid From</p>
+              <p>05/17</p>
+            </span>
+            <span>
+              <p>Valid Thru</p>
+              <p>05/22</p>
+            </span>
+          </div>
+          <div class="midline">
+            Sheldon Fernandes
+          </div>
+        </div>
+        <div class="card-details">
+          <p>
+            <button class="btn btn-primary text-left card3" type="button" data-toggle="collapse" data-target="#collapseDetail" aria-expanded="false"
+              aria-controls="collapseDetail">
+              Card Details
+            </button>
+          </p>
+          <div class="collapse" id="collapseDetail">
+            <div class="card card-body">
+              <div style="display: block;">
+                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+                  [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+          </div>
+          <p>
+            <button class="btn btn-primary text-left card3" type="button" data-toggle="collapse" data-target="#collapseGraph" aria-expanded="false"
+              aria-controls="collapseGraph">
+              Usage Demographics
+            </button>
+          </p>
+          <div class="collapse" id="collapseGraph">
+            <div class="card card-body">
+              <div style="display: block;">
+                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+                  [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+          </div>
+          <p>
+            <button class="btn btn-primary text-left card3" type="button" data-toggle="collapse" data-target="#collapseTxn" aria-expanded="false"
+              aria-controls="collapseTxn">
+              Transactions
+            </button>
+          </p>
+          <div class="collapse" id="collapseTxn">
+            <div class="card card-body">
+              <ul>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 1
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 2
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 3
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+                <li>
+                  <span class="pull-left">
+                    Transaction - 4
+                  </span>
+                  <span class="pull-right amount-credit">+ &#8377; 500</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

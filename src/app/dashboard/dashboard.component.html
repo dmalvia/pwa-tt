@@ -1,0 +1,41 @@
+<div class="container-fluid bg-img">
+  <div class="white-card-menu">
+    <div class="horizontal-nav" *ngIf="selectedBanking == 'retail'">
+      <a routerLink="/dashboard/accounts" routerLinkActive="active">Accounts</a>
+      <a routerLink="/dashboard/fundtransfer" routerLinkActive="active">Fund Transfer</a>
+      <a routerLink="/dashboard/mycards" routerLinkActive="active">My Cards</a>
+      <a href="">Your Page</a>
+    </div>
+    <div class="horizontal-nav" [ngClass]="{'green-border': selectedBanking == 'corporate'}" *ngIf="selectedBanking == 'corporate'">
+      <a routerLink="/dashboard/accounts" routerLinkActive="active">Accounts</a>
+      <a routerLink="/dashboard/fundtransfer" routerLinkActive="active">Create Txn</a>
+      <a routerLink="/dashboard/txnauthorize" routerLinkActive="active">My Txn</a>
+      <a href="">Service Request</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <div *ngIf="hidefloatingDiv" id="container-floating" (click)="openOptions()" [class.floating-hover]="showOptions">
+
+    <div class="nd5 nds" [class.menu-show]="showOptions" data-toggle="tooltip" data-placement="left">
+      <p class="letter" *ngIf="selectedBanking == 'retail'">Create Recurring Deposit</p>
+      <p class="letter" *ngIf="selectedBanking == 'corporate'"> Working Capital Loan</p>
+    </div>
+    <div class="nd4 nds" [class.menu-show]="showOptions" data-toggle="tooltip" data-placement="left">
+      <p class="letter" *ngIf="selectedBanking == 'retail'">Create Fixed Deposit</p>
+      <p class="letter" *ngIf="selectedBanking == 'corporate'">Create Fixed Deposit</p>
+    </div>
+    <div class="nd3 nds" [class.menu-show]="showOptions" data-toggle="tooltip" data-placement="left">
+      <p class="letter" *ngIf="selectedBanking == 'retail'">Create Recurring Deposit</p>
+      <p class="letter" *ngIf="selectedBanking == 'corporate'">Create Recurring Deposit</p>
+    </div>
+    <div class="nd1 nds" [class.menu-show]="showOptions" data-toggle="tooltip" data-placement="left">
+      <p class="letter" *ngIf="selectedBanking == 'retail'">Apply for Personal Loan</p>
+      <p class="letter" *ngIf="selectedBanking == 'corporate'">Over Draft Account</p>
+    </div>
+
+    <div id="floating-button" [ngClass]="{'greenbg': selectedBanking == 'corporate'}" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()">
+      <fa name="plus" class="plus" [class.float-animate]="showOptions"></fa>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="container-fluid transfer-container" style="padding-bottom:56px;">
+  <div class="bg-account row">
+    <div class="col-md-12 col-sm-12" *ngIf="selectedBanking == 'corporate'">
+      <div class="grey-card card-common">
+          <table class="table table-striped" *ngIf="showTab">
+              <tr *ngFor="let item of dummyTxn" style="cursor: pointer;" (click)="showAllInfo(item)">
+                <td><div><b>{{item.date}}</b></div><div style="font-size: 12px;color:#aaa">{{item.txn}}</div></td>
+                <td style="vertical-align: middle;">{{item.mode}}</td>
+                <td class="text-right"><div><b>Rs {{item.amount}}</b></div><div style="font-size: 12px;" [ngStyle]="setColor(item.status)"><b>{{item.status}}</b></div></td>
+              </tr> 
+          </table>
+          <div *ngIf="showSummary" class="summary" [ngClass]="{'summaryg':selectedBanking == 'corporate'}">
+              <div>
+                <span>From</span>
+                <span>{{txnDetail.from}}</span>
+              </div>
+              <div>
+                <span>To</span>
+                <span>{{txnDetail.to}}</span>
+              </div>
+              <div>
+                <span>Amount</span>
+                <span>
+                  Rs {{txnDetail.amount}}</span>
+              </div>
+              <div>
+                <span>Mode</span>
+                <span>{{txnDetail.mode}}</span>
+              </div>
+              <div>
+                <span>Date</span>
+                <span>{{txnDetail.date}}</span>
+              </div>
+              <div *ngIf="showComment" style="">
+                <span>Comment</span>
+                <span><input style="display: inherit;width: 70%" type="comment" class="form-control" placeholder="comment" /></span>
+              </div>
+              <hr style="margin:8px 0px 15px;">
+              <div>
+                
+                <button *ngIf="!showComment && user == 'checker' && 'Pending' == txnDetail.status" style="margin-bottom:15px;" type="button" class="btn btn-primary transfer-btn" (click)="transferDone('checker')" [ngClass]="{'greenbg':selectedBanking == 'corporate'}">Approve</button>
+                <button style="margin-bottom:15px;" *ngIf="!showComment && user == 'checker' && 'Pending' == txnDetail.status" type="button"  class="btn btn-primary transfer-btn color-red" (click)="showCommentBox()">Reject</button>
+                <button *ngIf="!showComment" style="margin-bottom:15px;" type="button " class="btn btn-primary color-orange transfer-btn" (click)="backToTable() ">Back</button>
+                <button *ngIf="showComment"  style="margin-bottom:15px;" type="button" [ngClass]="{'greenbg':selectedBanking == 'corporate'}" class="btn btn-primary transfer-btn" (click)="transferDone('maker')">Submit</button>
+                <button *ngIf="showComment" type="button"  class="btn btn-primary transfer-btn color-orange" (click)="backToTable()">Cancel</button>
+              </div>
+          </div>
+          <div class="success-msg text-center" *ngIf="showFinalScreen">
+            <img src="assets/checkmark.png" width="50px" />
+            <div>{{txnDetail.amount}}</div>
+            <div style="font-size:13px;margin:10px 0;">Reference number :
+              <b>{{txnDetail.txn}}</b>
+            </div>
+            <div style="color:green">{{message}}</div>
+            <button style="margin-top:15px;" type="button " class="btn btn-primary transfer-btn" [ngClass]="{'greenbg':selectedBanking == 'corporate'}" (click)="navigateToAccounts() ">Accounts Overview</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

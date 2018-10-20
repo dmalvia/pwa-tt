@@ -1,0 +1,22 @@
+<div class="container-fluid bg-img">
+  <div class="container-main">
+    <div class="container">
+      <div class="row">
+        <div class="chat-content">
+          <div #scrollMe class="msg-container">
+            <app-messageitem (selectedMessage)="addSelectedAsUserInput($event)" *ngFor="let itemEl of messages" [message]="itemEl"></app-messageitem>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bot-div" [class.change-pos]="myFocusVar">
+      <div class="table-div">
+        <input #input type="text" class="form-control" [(ngModel)]="userMessage" id="inputText" placeholder="How can I help ?">
+        <div class="text-right font-blue">
+          <!-- <fa name="microphone" class="microphone" *ngIf="!showSend"></fa> -->
+          <fa name="paper-plane" class="paper-plane" (click)="sendMessage(true)"></fa>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

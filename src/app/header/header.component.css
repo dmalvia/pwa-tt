@@ -1,0 +1,119 @@
+header {
+    border-bottom: 1px solid #dfdfdf;
+    position: fixed;
+    padding: 8px;
+    z-index: 13;
+    background: #fff;
+    width: 100%;
+}
+.logo {
+    font-family: 'Graduate', cursive;
+    font-size: 25px;
+    cursor: pointer;
+}
+header .menu {
+    position: absolute;
+    left: 15px;
+    font-size: 20px;
+    top: 12px;
+    cursor:pointer
+}
+.sidebar-div {
+    position: relative;
+    z-index: 3;
+}
+.sidebar-menu {
+    width:300px;
+    height:100%;
+    position: fixed;
+    /* z-index: 1; */
+    top:0;
+    left:-300px;
+    /*background: rgba(0, 105, 217, 1);*/
+    background: #0062a8;
+    
+transition:0.5s; 
+}
+.menu-list-div {
+    margin-top:50px;
+}
+.sidebar-menu .menu-list-div > div {
+    color:rgba(255,255,255,0.6);
+    display: block;
+    font-size:18px;
+    padding:10px;
+    transition:0.3s;
+    text-decoration: none;
+    cursor: pointer
+}
+.sidebar-menu .menu-list-div > div:hover,.sidebar-menu .close-menu:hover {
+    color:rgba(255,255,255,1);
+}
+.sidebar-menu .close-menu {
+    color:rgba(255,255,255,0.6);
+    font-size:20px;
+    cursor: pointer;
+    float:right;
+    padding:10px 30px;
+}
+
+.addLeft {
+    left:0px !important;
+}
+
+@media only screen and (max-width:1000px) {
+    /* .sidebar-menu {
+        left:-300px;
+    } */
+}   
+
+
+/* Banner connection css */
+.connection-banner {
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 2px;
+    transition:0.5s;
+    top:-22px;
+    margin-top: 54px;
+}
+.connection-red {
+    background: red;
+}
+
+.show-banner {
+    top:0px;
+}
+
+.bank-opt {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    /*background: #dfdfdf;  */
+    display: table; 
+}
+.bank-opt span {
+    padding: 5px 8px 5px 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.bank-opt .retail-opt {
+    background: #0062a8;
+    color:#fff;
+}
+
+
+
+.bank-opt .corp-opt {
+    background: rgba(75,184,151,1);;
+    color:#fff;
+}
+
+.changeBg {
+    background: #dfdfdf !important;
+}

@@ -1,0 +1,207 @@
+<div class="container-fluid transfer-container" style="padding-bottom:56px;">
+  <div class="bg-account row">
+    <div class=" col-md-12 col-sm-12" *ngIf="selectedBanking == 'corporate'">
+      <div *ngIf="user == 'checker'" class="grey-card card-common noti" (click)="goToTxn()" [hidden]="offnoti">
+        Corpretail initiated transaction of Rs 10,000 pending for approval.
+      </div>
+    </div>
+    <div class=" col-md-12 col-sm-12" *ngIf="selectedBanking == 'corporate'">
+      <div class="grey-card card-common">
+        <div class="account-list">
+          <div class="pull-left">
+            <div class="account-type">
+              <fa name="bank" class="visa" [ngClass]="{'green-color':selectedBanking == 'corporate'}"></fa> Current Account</div>
+            <div class="acc-num">10000000834</div>
+          </div>
+          <div class="pull-right acc-amt">
+            <span style="font-size:13px;vertical-align: text-top;">&#x20b9;</span>10,00,000
+          </div>
+        </div>
+        <hr style="margin:8px 0px 6px;">
+        <div class="pay-div text-right" [ngClass]="{'green-color':selectedBanking == 'corporate'}">
+          <span (click)="goToFundTransfer()">Transfer</span>
+          <span class="more-accounts-options">...</span>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-12 col-sm-12" *ngIf="selectedBanking == 'corporate'">
+      <div class="grey-card card-common">
+        <div class="account-list">
+          <div class="pull-left">
+            <div class="account-type">
+              <fa name="money" class="visa" [ngClass]="{'green-color':selectedBanking == 'corporate'}"></fa> Fixed Deposit</div>
+            <div class="acc-num">FD45600834</div>
+          </div>
+          <div class="pull-right acc-amt">
+            <span style="font-size:13px;vertical-align: text-top;">&#x20b9;</span>20,00,000
+          </div>
+        </div>
+        <!-- <hr style="margin:8px 0px 6px;"> -->
+        <!-- <div class="pay-div text-right" [ngClass]="{'green-color':selectedBanking == 'corporate'}">
+          <span (click)="goToFundTransfer()">Transfer</span>
+          <span class="more-accounts-options">...</span>
+        </div> -->
+      </div>
+    </div>
+    <div class=" col-md-12 col-sm-12" *ngIf="selectedBanking == 'corporate'">
+      <div class="grey-card card-common">
+        <div class="account-list">
+          <div class="pull-left">
+            <div class="account-type">
+              <fa name="bank" class="visa" [ngClass]="{'green-color':selectedBanking == 'corporate'}"></fa> Recurring Deposit</div>
+            <div class="acc-num">RD4560034</div>
+          </div>
+          <div class="pull-right acc-amt">
+            <span style="font-size:13px;vertical-align: text-top;">&#x20b9;</span>50,000
+          </div>
+        </div>
+        <!-- <hr style="margin:8px 0px 6px;"> -->
+        <!-- <div class="pay-div text-right" [ngClass]="{'green-color':selectedBanking == 'corporate'}">
+          <span (click)="goToFundTransfer()">Transfer</span>
+          <span class="more-accounts-options">...</span>
+        </div> -->
+      </div>
+    </div>
+    <div class=" col-md-12 col-sm-12" *ngIf="selectedBanking == 'retail'">
+      <div class="grey-card card-common">
+        <div class="account-list">
+          <div class="pull-left">
+            <div class="account-type">
+              <fa name="bank" class="visa" [ngClass]="{'green-color':selectedBanking == 'corporate'}"></fa> Savings Account</div>
+            <div class="acc-num">10000000034</div>
+          </div>
+          <div *ngIf="selectedBanking == 'retail'" class="pull-right acc-amt">
+            <span style="font-size:13px;vertical-align: text-top;">&#x20b9;</span>28,000
+          </div>
+          <div *ngIf="selectedBanking == 'corporate'" class="pull-right acc-amt">
+            <span style="font-size:13px;vertical-align: text-top;">&#x20b9;</span>1,00,000
+          </div>
+        </div>
+        <hr style="margin:8px 0px 6px;">
+        <div class="pay-div text-right" [ngClass]="{'green-color':selectedBanking == 'corporate'}">
+          <span (click)="goToFundTransfer()">Transfer</span>
+          <span class="more-accounts-options">...</span>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-12 col-sm-12" *ngIf="selectedBanking == 'retail'">
+      <div class="grey-card card-common">
+        <div class="account-list">
+          <div class="pull-left">
+            <div class="account-type">
+              <fa name="cc-visa" class="visa" [ngClass]="{'green-color':selectedBanking == 'corporate'}"></fa> Platinum
+            </div>
+            <div class="acc-num">XXXX XXXX XXXX 2345</div>
+          </div>
+          <div *ngIf="selectedBanking == 'retail'" class="pull-right acc-amt-red">
+            <span style="font-size:13px;vertical-align: text-top;">&#x20b9;</span> 32,000
+          </div>
+          <div *ngIf="selectedBanking == 'corporate'" class="pull-right acc-amt-red">
+            <span style="font-size:13px;vertical-align: text-top;">&#x20b9;</span> 2,50,000
+          </div>
+        </div>
+        <div id="myProgress">
+          <div id="myBar">
+          </div>
+          <div class="limit pull-right ">
+            <p>Credit</p>
+            <p *ngIf="selectedBanking == 'retail'">&#x20b9; 30,000</p>
+            <p *ngIf="selectedBanking == 'corporate'">&#x20b9; 3,00,000</p>
+          </div>
+          <div class="limit pull-left">
+            <p>Available</p>
+            <p *ngIf="selectedBanking == 'retail'">&#x20b9; 5,000</p>
+            <p *ngIf="selectedBanking == 'corporate'">&#x20b9; 50,000</p>
+          </div>
+        </div>
+        <hr style="margin:8px 0px 6px;">
+        <div class="pay-div text-right" [ngClass]="{'green-color':selectedBanking == 'corporate'}">
+          <span style="border-right:0px" (click)="goToFundTransfer()">Pay card</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <div class="grey-card card-common">
+        <div class="account-list">
+          <div class="pull-left">
+            <div class="account-type" *ngIf="selectedBanking == 'retail'">
+              <fa name="automobile" class="visa" [ngClass]="{'green-color':selectedBanking == 'corporate'}"></fa> Auto Loan</div>
+              <div class="account-type" *ngIf="selectedBanking == 'corporate'">
+              <fa name="money" class="visa" [ngClass]="{'green-color':selectedBanking == 'corporate'}"></fa> Working Capital Loan</div>
+            <div class="acc-num">XXXXXXXX34</div>
+          </div>
+          <div class="pull-right acc-amt-red">
+            <span style="font-size:13px;vertical-align: text-top;">&#x20b9;</span> 2,00,000</div>
+        </div>
+        <div class="row emi-details">
+          <div class="col-half">
+            <div class="progress" data-percentage="50">
+              <span class="progress-left">
+                <span class="progress-bar"></span>
+              </span>
+              <span class="progress-right">
+                <span class="progress-bar"></span>
+              </span>
+              <div class="progress-value">
+                <div>
+                  50%
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-half loan-details text-center">
+            <div>
+              <span class="pull-left">Loan Amount</span>
+              <span class="pull-right">&#x20b9; 4,00,000</span>
+            </div>
+            <div>
+              <span class="pull-left">EMI Amount</span>
+              <span class="pull-right">&#x20b9; 10,000</span>
+            </div>
+            <div>
+              <span class="pull-left">Next Due Date</span>
+              <span class="pull-right">12/05/2018</span>
+            </div>
+          </div>
+        </div>
+        <hr style="margin:8px 0px 6px;">
+        <div class="pay-div text-right">
+          <span style="border-right:0px" (click)="goToFundTransfer()">Pay EMI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6"></div>
+  </div>
+</div>
+
+<!-- <div class="container-fluid" style="padding:25px;">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <div style="display: block;">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+          [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <div style="display: block">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+          [chartType]="barChartType" (chartHover)="barChartHovered($event)" (chartClick)="barChartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <div style="display: block">
+        <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="pieChartHovered($event)"
+          (chartClick)="pieChartClicked($event)"></canvas>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container" style="padding:25px;">
+  <div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6"></div>
+  </div>
+</div>
